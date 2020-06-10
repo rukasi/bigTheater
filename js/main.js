@@ -17,12 +17,12 @@ $(document).ready(function(){
         }
     })
 
-    function AjaxFormRequest(formMain,url) {
-        jQuery.ajax({
-            url: url,
+    function ajaxFormRequest() {
+        $.ajax({
+            url: "mail.php",
             type: "POST",
             dataType: "html",
-            data: jQuery("#"+formMain).serialize(),
+            data: $('#mForm').serialize(),
             success: function(response) {
                 alert('Письмо успешно отправлено!');
             },
