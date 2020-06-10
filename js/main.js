@@ -21,7 +21,7 @@ $(document).ready(function(){
 
     function ajaxFormRequest() {
         $.ajax({
-            url: "mail.php",
+            url: "js/mail.php",
             type: "POST",
             dataType: "html",
             data: $('#mForm').serialize(),
