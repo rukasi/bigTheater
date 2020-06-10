@@ -16,6 +16,8 @@ $(document).ready(function(){
             }
         }
     })
+    
+    $('#button').click(function(){ajaxFormRequest()});
 
     function ajaxFormRequest() {
         $.ajax({
