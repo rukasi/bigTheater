@@ -17,9 +17,7 @@ $(document).ready(function(){
         }
     })
     
-    $('#button').click(function(){ajaxFormRequest()});
-
-    function ajaxFormRequest() {
+    $('#button').click(function(){
         $.ajax({
             url: "mail.php",
             type: "POST",
@@ -38,5 +36,7 @@ $(document).ready(function(){
         .val('')
         .removeAttr('checked')
         .removeAttr('selected');*/
-    }
+    });
+
+    
 });
