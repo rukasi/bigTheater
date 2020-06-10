@@ -24,10 +24,10 @@ $(document).ready(function(){
           type: "POST",
           data: $('#mForm').serialize(),
           success: function(response) {
-            //обработка успешной отправки
+            alert('Письмо успешно отправлено!');
           },
           error: function(response) {
-            //обработка ошибок при отправке
+            alert('Ошибка отправки!');
          }
         });
     });
