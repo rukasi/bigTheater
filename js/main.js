@@ -17,18 +17,24 @@ $(document).ready(function(){
         }
     })
 
-    $('#mForm').submit(function(e){
-        e.preventDefault();
-        $.ajax({
-          url: "mail.php",
-          type: "POST",
-          data: $('#mForm').serialize(),
-          success: function(response) {
-            alert('Письмо успешно отправлено!');
-          },
-          error: function(response) {
-            alert('Ошибка отправки!');
-         }
+    function AjaxFormRequest(formMain,url) {
+        jQuery.ajax({
+            url: url,
+            type: "POST",
+            dataType: "html",
+            data: jQuery("#"+formMain).serialize(),
+            success: function(response) {
+                alert('Письмо успешно отправлено!');
+            },
+            error: function(response) {
+                alert('Ошибка отправки письма!');
+            }
         });
-    });
+        
+        /*$(':input','#formMain')
+        .not(':button, :submit, :reset, :hidden')
+        .val('')
+        .removeAttr('checked')
+        .removeAttr('selected');*/
+    }
 });
