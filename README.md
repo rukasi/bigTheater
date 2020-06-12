@@ -1,3 +1,1 @@
 # bigTheater
-
-Hello from VSCode!
